@@ -1,0 +1,18 @@
+build:
+  cargo build
+
+release:
+  cargo build --release
+
+run:
+  cargo run
+
+debug:
+  RUST_LOG=debug cargo run
+
+test:
+  reset; RUST_LOG=info cargo test -- --show-output --test-threads=1
+
+fmt:
+  cargo fmt
+
